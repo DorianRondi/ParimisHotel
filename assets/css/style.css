@@ -1,0 +1,442 @@
+/* :::::::::::::::::::::::::::::::::::::::::::::: */
+/* :::::::::::::::    GENERALE    ::::::::::::::: */
+/* :::::::::::::::::::::::::::::::::::::::::::::: */
+
+*,
+*::before,
+*::after,
+:root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.flexbar,
+.mediaSocio nav,
+.topbar-menu,
+.footer-body,
+.footer-board{
+  display:flex;
+  flex-direction: row;
+}
+nav,
+.news ul,
+.mediaSocio,
+.footer-container,
+.footer-suscribe-maid,
+.footer-suscribe-maid fieldset{
+  display:flex;
+  flex-direction: column;
+}
+html {
+  overflow: hidden;
+  height: 100%;
+}
+body {
+  height: 100%;
+}
+a{
+  color: hsl(0,0%,100%);
+  text-decoration: none;
+}
+h3{
+  text-align: center;
+  font-size: 40px;
+  font-weight: bolder;
+}
+h4{
+  font-size: 25px;
+  font-weight: bold;
+}
+h5{
+  font-size:20px;
+}
+hr{
+  background-color:hsl(0,100%,50%);
+  width: 70%;
+  height: 2px;
+  margin:auto;
+  margin-bottom: 30px;
+}
+p{
+  font-family: sans-serif;
+  margin: 10px 0;
+  text-indent: 40px;
+}
+/* :::::::::::::::::::::::::::::::::::::::::::::::::: */
+/* :::::::::::::::    BARRE DE MENU    :::::::::::::: */
+/* :::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+.topbar{
+  position: absolute;
+  width:100%;
+  top:0;
+  z-index: 10;
+  background: linear-gradient(
+    hsla(0,100%,0%,1) 0%,
+    hsla(0,100%,0%,.5) 40%,
+    hsla(0,100%,0%,.2) 95%,
+    hsla(0,100%,0%,0) 100%);
+  transition:0.5s;
+}
+.topbar:hover{
+  background-color: hsl(0,100%,0%);
+}
+.topbar:first-child{
+  position: sticky;
+  padding: 0 15px;
+}
+.flexbar,
+.topbar-menu{
+  justify-content: space-between;
+  align-items: center;
+  color: hsl(0,0%,100%);
+}
+
+/* -----------------*/
+/*       Logo       */
+/* ---------------- */
+
+.logo{
+  height:70px;
+  border-radius: 0.2rem;
+}
+.logo img{
+  height:70px;
+}
+
+/* --------------------------- */
+/*       Menu Principale       */
+/* --------------------------- */
+
+.topbar-menu{
+  font-family:'Parisienne',serif;
+  font-size: 1.85em;
+}
+.topbar-menu a{
+  padding:0 10px;
+  height: 70px;
+}
+.page-inactive,
+.footer-title,
+.footer-link,
+#page-active,
+#reza{
+  position:relative;
+}
+.page-inactive,
+#page-active
+{
+  top:19px;
+}
+.footer-title:after,
+.page-inactive:after,
+.footer-link:hover:after,
+#page-active:after,
+#reza:after{
+  position: absolute;
+  content: "";
+  height:2px;
+  width: 100%;
+  top:100%;
+  left:0;
+  background: hsl(0,100%,50%);
+}
+.page-inactive:after,
+#reza:after{
+  transition: transform 0.5s;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+.page-inactive:hover:after,
+#reza:hover:after{
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+/* --------------------------------- */
+/*       Reservation & Langues       */
+/* --------------------------------- */
+
+#btn-reserver{
+  display: block;
+  padding: 10px 10px;
+  border: double hsl(0,0%,100%);
+  border-radius: 3px;
+  font-family: Cambria, Georgia, Times, 'Times New Roman', serif;
+  font-size: 24px;
+  font-weight: 500;
+  background-color: hsl(225,100%,19.6%);
+}
+.choix-langue{
+  margin: 0 5px;
+}
+.choix-langue nav{
+  height:24px;
+  flex-wrap: nowrap;
+  overflow: hidden;
+  transition: overflow 1s;
+}
+.choix-langue nav:hover{
+  overflow: visible;
+}
+.choix-langue nav a{
+  height:26px;
+  padding-bottom: 2px;
+}
+.drapeau{
+  filter: grayscale(1);
+}
+.drapeau-active,
+.drapeau:hover{
+  filter: grayscale(0);
+}
+
+/* ::::::::::::::::::::::::::::::::::::::::::: */
+/* :::::::::::::::    FOOTER    :::::::::::::: */
+/* ::::::::::::::::::::::::::::::::::::::::::: */
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: 600px;
+  padding-top: 70px;
+  padding-bottom: 0;
+  color:hsl(0,0%,100%);
+  background-color: hsl(0,0%,0%);
+}
+.footer-container{
+  height:100%;
+}
+.footer-body{
+  max-width: 1200px;
+  height:100%;
+  margin:auto;
+  justify-content:space-evenly;
+}
+.footer-suscribe-maid {
+  min-width:345px;
+  width:345px;
+  justify-content: flex-end;
+  background-image: url(../../img/logo/FrenchMaid3.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.footer-suscribe-maid form{
+  position:relative;
+  background-color: hsl(0,0%,0%,.4);
+  bottom: 145px;
+}
+.footer-suscribe-maid fieldset{
+  margin:0 15px;
+  padding:20px;
+  border:3px solid hsl(0,100%,50%);
+}
+.footer-suscribe-maid label{
+  font-size: 25px;
+}
+#mail{
+  margin-top:12px;
+}
+.footer-suscribe-maid input{
+  color:hsl(0,0%,100%);
+}
+
+/*
+.footer-suscribe-maid input[type=submit]{
+  width:100%;
+  padding:6px 0;
+  background-color:hsl(225,100%,19.6%);
+  font-size:18px;
+  border-radius:5px;
+}
+*/
+
+.footer-board{
+  justify-content:center;
+}
+.contact{
+  display:flex;
+  flex-direction: column;
+}
+.contact>article{
+  margin: 25px 0;
+}/*
+.footer-board,
+.footer-board article{
+  border:1px dashed yellow;
+}*/
+#mail{
+  background-color:hsl(0,0%,0%,.5);
+}
+[placeholder]::placeholder{
+  color:hsl(0,0%,100%);
+}
+[placeholder]:focus::placeholder {
+  color: transparent;
+}
+.social{
+  height:36px;
+  width:36px;
+  margin: 2px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: hsl(0,0%,100%);
+}
+.facebook{
+  background-image: url(../../img/icon/facebook_OFF.png);
+}
+.facebook:hover{
+  background-image: url(../../img/icon/facebook_ON.png);
+}
+.twitter{
+  background-image: url(../../img/icon/twitter_OFF.png);
+}
+.twitter:hover{
+  background-image: url(../../img/icon/twitter_ON.png);
+}
+.linkedin{
+  background-image: url(../../img/icon/linkedin_OFF.png);
+}
+.linkedin:hover{
+  background-image: url(../../img/icon/linkedin_ON.png);
+}
+.pinterest{
+  background-image: url(../../img/icon/pinterest_OFF.png);
+}
+.pinterest:hover{
+  background-image: url(../../img/icon/pinterest_ON.png);
+}
+.instagram{
+  background-image: url(../../img/icon/instagram_OFF.png);
+}
+.instagram:hover{
+  background-image: url(../../img/icon/instagram_ON.png);
+}
+.telegram{
+  background-image: url(../../img/icon/telegram_OFF.png);
+}
+.telegram:hover{
+  background-image: url(../../img/icon/telegram_ON.png);
+}
+.tumblr{
+  background-image: url(../../img/icon/tumblr_OFF.png);
+}
+.tumblr:hover{
+  background-image: url(../../img/icon/tumblr_ON.png);
+}
+.youtube{
+  background-image: url(../../img/icon/youtube_OFF.png);
+}
+.youtube:hover{
+  background-image: url(../../img/icon/youtube_ON.png);
+}
+.footer-link,
+.footer-title{
+  display:inline-block;
+}
+.footer-title{
+  margin-bottom: 10px;
+}
+.adressHotel p{
+  text-indent:0;
+  margin:0 0 10px 0;
+}
+.news{
+  max-width: 33%;
+  margin-left:25px;
+}
+.copyright,
+.ifocop{
+  font-size:14px;
+  text-align: center;
+  background-color: hsla(0,0%,0%,0);
+  color: hsl(0,0%,100%);
+}
+.ifocop{
+  border-bottom: 2px solid hsla(0,0%,0%,0);
+}
+
+
+
+/****            Effet bouton rotation            ****/
+/**** https://www.youtube.com/watch?v=xSJul2V7upA ****/
+
+.inscription-VIP{
+  position:relative;
+  overflow:hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-self: center;
+  width:100%;
+  height:50px;
+  margin-top: 16px;
+  background-color:hsl(225,100%,19.6%);
+  /*border-radius:10px;*/
+}
+.inscription-VIP::before{
+  content:'';
+  position:absolute;
+  width:500px;
+  height:500px;
+  background-image:conic-gradient(transparent,transparent,transparent,hsl(280,100%,50%),hsl(60,100%,65%),hsl(280,100%,50%));
+  animation-name: rotation;
+  animation-duration:4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.inscription-VIP::after{
+  content:'';
+  position:absolute;
+  width:500px;
+  height:500px;
+  background-image:conic-gradient(transparent,transparent,transparent,hsl(280,100%,50%),hsl(60,100%,65%),hsl(280,100%,50%));
+  animation-name: rotation;
+  animation-delay:-2s;
+  animation-duration:4s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+.inscription-VIP input{
+  width: calc(100% - 7px);
+  position:absolute;
+  inset:3px;
+  background-color:hsl(225,100%,19.6%);;
+  z-index:50;
+  /*border-radius:10px;*/
+}
+
+@keyframes rotation {
+  0%{
+    transform:rotate(0deg)
+  }
+  100%{
+    transform:rotate(360deg)
+  }
+}
+
+.test{
+  float:left;
+  width: 64px;
+  height: 64px;
+  margin:10px 3px 0 0;
+  background-image: url(../../img/AAA_ressources/Champagne-firework_Photo\ by\ Myriam\ Zilles\ on\ Unsplash.jpg);
+  background-size:contain;
+}
+
+
+
+.footer-gridcontainer,
+.footer-container{
+  display: grid;
+  /*grid-template-columns: 1fr 1fr;*/
+}
+
+/*.mediaSocio{
+  grid-column: 1/2;
+}
+.footer img{
+  width:247px;
+  height:443px;
+}

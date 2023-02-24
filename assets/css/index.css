@@ -1,0 +1,185 @@
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+/* :::::::::::::::    CORPS DE LA PAGE    :::::::::::::: */
+/* ::::::::::::::::::::::::::::::::::::::::::::::::::::: */
+
+main{
+  margin-top: -70px;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 100%;
+  perspective: 1px;
+  transform-style: preserve-3d;
+}
+
+h2, h3{
+  font-family: 'Parisienne', serif;
+}
+
+.cadre p{
+  font-family: serif;
+}
+
+.hotel {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  transform-style: inherit;
+  z-index: -1;
+}
+
+.section {
+  position: relative;
+  min-height: 80vh;
+  width: 100%;
+  transform-style: inherit;
+}
+
+.no-paralax {
+  background-image: url(../../img/index/IndexFondTissusSatinBlanc1920x1080Mini-LibreDeDroit-1zoom.me.jpg);
+  background-size: contain;
+  background-color: hsl(0,100%,100%);
+  box-shadow: 0 0 20px hsl(0,0%,20%);
+  z-index: 1;
+}
+
+h2 {
+  width:101%;
+  color:hsl(0,100%,100%);
+  font-weight: bold;
+  font-size: 4rem;
+  text-align: center;
+  position: absolute;
+  padding: 1rem;
+  background: hsla(0,100%,0%,.8);
+  top: 30%;
+  left: 50%;
+  transform: translateZ(-1px) scale(2) translate(-25%,-25%);
+}
+
+.section h2{
+  z-index: 3;
+  transform: translate(-50%, -50%);
+  box-shadow: none;
+  border:1px solid hsl(0,100%,0%);
+}
+
+/****              Effet Parallax              ****/
+/**** https://codepen.io/yarnetsky/pen/PoExrGd ****/
+
+.restaurant-paralax h2,
+.receptions-paralax h2,
+  .chambres-paralax h2,
+       .spa-paralax h2{
+  transform: translateZ(-.3px) scale(1.3) translate(-39%, -39%);
+  z-index: 3;
+}
+.wide_cadre{
+    background-image: url(../../img/index/IndexFondTissusSatinBlanc1920x1080Mini-LibreDeDroit-1zoom.me.jpg);
+}
+.cadre{
+  display:flex;
+  max-height: 80vh;
+  max-width: 1600px;
+  margin: auto;
+  padding-top: 5%;
+  padding-bottom:5%;
+  font-size: 25px;
+  text-align: justify;
+}
+
+.cadre img,
+.cadre div{
+  margin:0 15px;
+}
+
+.cadre img{
+  box-shadow: hsl(0,100%,0%) 10px 10px 5px;
+  border-radius: 3px;
+  width: 40%;
+}
+
+.cadre div{
+  margin-top: 25px;
+  width: 60%;
+}
+
+#hotel1{
+  width: 20%;
+}
+
+#hotel2{
+  width:40%;
+}
+
+.restaurant-paralax::before,
+.receptions-paralax::before,
+  .chambres-paralax::before,
+     .hotel-paralax::before,
+       .spa-paralax::before,
+                   .section {
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+}
+
+.restaurant-paralax::before,
+.receptions-paralax::before,
+  .chambres-paralax::before,
+     .hotel-paralax::before,
+       .spa-paralax::before{
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  display: block;
+}
+
+.restaurant-paralax::before,
+.receptions-paralax::before,
+  .chambres-paralax::before,
+       .spa-paralax::before {
+  transform: translateZ(-.5px) scale(1.6);
+  z-index: -1;
+}
+
+/* ----------------------------- */
+/*       Section 1 : Hotel       */
+/* ----------------------------- */
+
+.hotel-paralax::before {
+  background-image: url(../../img/index/IndexHotel0Mini-COPYRIGHT-HotelBeauchamps.jpg);
+  transform: translateZ(-1px) scale(2.1);
+  min-height: 100%;
+  z-index: -2;
+}
+
+/* -------------------------------- */
+/*       Section 2 : Chambres       */
+/* -------------------------------- */
+
+.chambres-paralax::before {
+  background-image: url(../../img/index/IndexChambre0Mini-LibreDeDroit-AdamWINGER-Unsplash.com.jpg);
+}
+  
+/* ---------------------------------- */
+/*       Section 3 : Restaurant       */
+/* ---------------------------------- */
+
+.restaurant-paralax::before {
+  background-image: url(../../img/index/IndexRestaurant0Mini-LibreDeDroit-JayWENNINGTON-Unsplash.com.jpg);
+}
+
+/* --------------------------- */
+/*       Section 4 : Spa       */
+/* --------------------------- */
+
+.spa-paralax::before {
+  background-image: url(../../img/index/IndexSpa0Mini-LibreDeDroit-HannaPOSTOVA-Unsplash.com.jpg);
+}
+
+/* ---------------------------------- */
+/*       Section 5 : Receptions       */
+/* ---------------------------------- */
+
+.receptions-paralax::before {
+  background-image: url(../../img/index/IndexReceptions0Mini-\(source\ introuvable\).jpg);
+}
