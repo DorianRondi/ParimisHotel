@@ -10,6 +10,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+ul,
 .flexbar,
 .mediaSocio nav,
 .topbar-menu,
@@ -196,14 +197,26 @@ p{
 /* ::::::::::::::::::::::::::::::::::::::::::: */
 
 .footer {
+  /*height:calc(100vh - 110px);*/
   display: flex;
-  justify-content: space-between;
+  align-items: stretch;
+  align-content: stretch;
   width: 100%;
-  height: 600px;
   padding-top: 70px;
   padding-bottom: 0;
   color:hsl(0,0%,100%);
   background-color: hsl(0,0%,0%);
+}
+.soubrette{
+    background-image: url(../../img/logo/FrenchMaid3.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    min-height: 443px;
+    min-width: 247px;
+    width:100%;
+}
+.flipImage{
+transform: scaleX(-1);
 }
 .footer-container{
   height:100%;
@@ -346,15 +359,13 @@ p{
   max-width: 33%;
   margin-left:25px;
 }
-.copyright,
-.ifocop{
+.copyright{
   font-size:14px;
   text-align: center;
-  background-color: hsla(0,0%,0%,0);
+  background-color: hsl(0,0%,0%);
   color: hsl(0,0%,100%);
-}
-.ifocop{
-  border-bottom: 2px solid hsla(0,0%,0%,0);
+  padding-top: 5px;
+  padding-bottom: 21px;
 }
 
 
@@ -425,18 +436,7 @@ p{
   background-size:contain;
 }
 
-
-
-.footer-gridcontainer,
-.footer-container{
-  display: grid;
-  /*grid-template-columns: 1fr 1fr;*/
-}
-
-/*.mediaSocio{
-  grid-column: 1/2;
-}
-.footer img{
-  width:247px;
-  height:443px;
+.cadre{
+    display:flex;
+    width: 1200px;
 }

@@ -1,92 +1,87 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="icon" href="img/logo/FavIconBlasonLionNoir.ico"/>
-  <link rel="icon" type="image/png" href="img/logo/FavIconBlasonLionNoir.png"/>
-  <title>Hotel Parimis</title>
-
-  <!--=============-->
-  <!--    FONTS    -->
-  <!--=============-->
-
-  <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Parisienne&display=swap" rel="stylesheet">
-
-  <!--===========-->
-  <!--    CSS    -->
-  <!--===========-->
-
-  <link rel="stylesheet" href="assets/css/reset.css">
-  <link rel="stylesheet" href="assets/css/normalize_8.0.1.css">
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link rel="stylesheet" href="assets/css/index.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Parimis</title>
+  
+    <!--=============-->
+    <!--    FONTS    -->
+    <!--=============-->
+  
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Parisienne&display=swap" rel="stylesheet">
+  
+    <!--===========-->
+    <!--    CSS    -->
+    <!--===========-->
+  
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/normalize_8.0.1.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/chambres.css">
 </head>
 
 <body>
+    <!-- ::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::    Barre de menu    ::::::::::::::: -->
+    <!-- ::::::::::::::::::::::::::::::::::::::::::::::::::: -->
   
-  <!-- ::::::::::::::::::::::::::::::::::::::::::::::::::: -->
-  <!-- :::::::::::::::    Barre de menu    ::::::::::::::: -->
-  <!-- ::::::::::::::::::::::::::::::::::::::::::::::::::: -->
-
-  <header class="topbar">
-    <div class="flexbar">
-
-      <!--============-->
-      <!--    Logo    -->
-      <!--============-->
-
-      <a href="index.html" class="logo">
-        <img src="img/logo/logoBlasonLionBlanc.png" alt="">
-      </a>
+    <header class="topbar">
+        <div class="flexbar">
+            
+            <!--============-->
+            <!--    Logo    -->
+            <!--============-->
       
-      <!--======================-->
-      <!--    Menu Principal    -->
-      <!--======================-->
-
-      <div>
-        <nav class="topbar-menu">
-          <a href="index.html"><div class="page-inactive">L'hotel</div></a>
-          <a href="chambres.html"><div class="page-inactive">Chambres & Suites</div></a>
-          <a href="restaurant.html"><div class="page-inactive">Restaurant & Bar</div></a>
-          <a href="spa.html"><div class="page-inactive">Spa & Bien être</div></a>
-          <a href="evenements.html"><div class="page-inactive">Evènements & Receptions</div></a>
-        </nav>
-      </div>
+            <a href="index.html" class="logo">
+                <img src="img/logo/logoBlasonLionBlanc.png" alt="">
+            </a>
       
-      <!--========================================-->
-      <!--    Reservation & Choix de la Langue    -->
-      <!--========================================-->
+            <!--======================-->
+            <!--    Menu Principal    -->
+            <!--======================-->
 
-      <div class="flexbar">
-        <a href="index.html" id="btn-reserver">
-          <div id="reza">RESERVER</div>
-        </a>
-        <div class="choix-langue">
-          <nav>
-            <a href="index.html"><img src="img/icon/Drapeau-France.png" alt="" title="Français" class="drapeau drapeau-active"></a>
-            <a href="index.html"><img src="img/icon/Drapeau-Royaume-Unis.png" alt="" title="English" class="drapeau"></a>
-            <a href="index.html"><img src="img/icon/Drapeau-Allemagne.png" alt="" title="Deutsche" class="drapeau"></a>
-            <a href="index.html"><img src="img/icon/Drapeau-Russie.png" alt="" title="русский" class="drapeau"></a>
-            <a href="index.html"><img src="img/icon/Drapeau-Espagne.png" alt="" title="Español" class="drapeau"></a>
-            <a href="index.html"><img src="img/icon/Drapeau-Chine.png" alt="" title="中文" class="drapeau"></a>
-            <a href="index.html"><img src="img/icon/Drapeau-Japon.png" alt="" title="日本人" class="drapeau"></a>
-            <a href="index.html"><img src="img/icon/Drapeau-Coree-du-Sud.png" alt="" title="한국어" class="drapeau"></a>
-          </nav>
+            <div>
+                <nav class="topbar-menu">
+                    <a href="index.html"><div class="page-inactive">L'hotel</div></a>
+                    <a href="chambres.html"><div id="page-active">Chambres & Suites</div></a>
+                    <a href="restaurant.html"><div class="page-inactive">Restaurant & Bar</div></a>
+                    <a href="spa.html"><div class="page-inactive">Spa & Bien être</div></a>
+                    <a href="evenements.html"><div class="page-inactive">Evènements & Receptions</div></a>
+                </nav>
+            </div>
+      
+            <!--========================================-->
+            <!--    Reservation & Choix de la Langue    -->
+            <!--========================================-->
+      
+            <div class="flexbar">
+                
+                <a href="index.html" id="btn-reserver">
+                    <div id="reza">RESERVER</div>
+                </a>
+        
+                <div class="choix-langue">
+                    <nav>
+                        <a href="index.html"><img src="img/icon/Drapeau-France.png" alt="" title="Français" class="drapeau drapeau-active"></a>
+                        <a href="index.html"><img src="img/icon/Drapeau-Royaume-Unis.png" alt="" title="English" class="drapeau"></a>
+                        <a href="index.html"><img src="img/icon/Drapeau-Allemagne.png" alt="" title="Deutsche" class="drapeau"></a>
+                        <a href="index.html"><img src="img/icon/Drapeau-Russie.png" alt="" title="русский" class="drapeau"></a>
+                        <a href="index.html"><img src="img/icon/Drapeau-Espagne.png" alt="" title="Español" class="drapeau"></a>
+                        <a href="index.html"><img src="img/icon/Drapeau-Chine.png" alt="" title="中文" class="drapeau"></a>
+                        <a href="index.html"><img src="img/icon/Drapeau-Japon.png" alt="" title="日本人" class="drapeau"></a>
+                        <a href="index.html"><img src="img/icon/Drapeau-Coree-du-Sud.png" alt="" title="한국어" class="drapeau"></a>
+                    </nav>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </header>
-  
-  <!-- :::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
-  <!-- :::::::::::::::    Corps de la page    ::::::::::::::: -->
-  <!-- :::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
-
-  <main>
+    </header>
     
-  <!-- :::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
-  <!-- :::::::::::::::    Corps de la page    ::::::::::::::: -->
-  <!-- :::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+    <!-- :::::::::::::::    Corps de la page    ::::::::::::::: -->
+    <!-- :::::::::::::::::::::::::::::::::::::::::::::::::::::: -->
+  
+    <main>
     
 
     <!-- :::::::::::::::::::::::::::::::::::::::::::: -->
